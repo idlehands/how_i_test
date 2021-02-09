@@ -24,10 +24,55 @@
 					<img src="./markdown/cover-lmelixir.jpg" height="500">
 				</div>
 			</section>
-			<section data-markdown="./markdown/03_community.md"></section>
-			<section data-markdown="./markdown/01_name.md"></section>
-			<section data-markdown="./markdown/01_name.md"></section>
-
+			<section data-background-color="rgb(255, 255, 255)">
+				<div class="r-stack">
+					<img src="./markdown/community_logo.png">
+				</div>
+			</section>
+			<section data-markdown="./markdown/04_structure.md"></section>
+			<section>
+				<p>return values and side effects</p>
+			</section>
+			<section>
+				<h6>return values</h6>
+				<p>caller</p>
+				<p>
+					<span style="display: inline-block;" class="fragment fade-down">↓</span>
+					<span style="display: inline-block;" class="fragment fade-up">↑</span>
+				</p>
+				<p>code under test</p>
+				
+			</section>
+			<section>
+				<h6>side effects</h6>
+				<p>caller</p>
+				<p>
+					<span style="display: inline-block;" class="fragment fade-down">↓</span>
+				</p>
+				<p>code under test</p>
+				<p>
+					<span style="display: inline-block;" class="fragment fade-down">↓</span>
+				</p>	
+				<p>somewhere else</p>
+			</section>
+			<section>
+				<p>boundary</p>
+				<p>
+					<span style="color:#191919">|||||||</span>
+					<span style="display: inline-block; color: red" class="fragment fade-down">↓</span>
+					<span style="display: inline-block; color: green" class="fragment fade-down">↓</span>
+					<span style="color:#191919">||||||||||||||||</span>
+					<span style="display: inline-block; color: green" class="fragment fade-down">↓</span>
+					<span style="display: inline-block; color: red" class="fragment fade-down">↓</span>
+					<span style="color:#191919">|||||||</span>
+				</p>
+				<p>
+					<span style="color:red;">||||||</span>
+					<span style="color:green;">|||||||||||||||||||||||</span>
+					<span style="color:red;">||||||</span>
+				</p>
+			</section>
+			<section data-markdown="./markdown/08_custom_messages.md"></section>
 		</div>
 	</div>
 
