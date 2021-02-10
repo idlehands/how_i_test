@@ -18,42 +18,60 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section data-markdown="./markdown/01_name.md"></section>
+			<section data-markdown="./markdown/01_name.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
 			<section>
 				<div class="r-stack">
 					<img src="./markdown/cover-lmelixir.jpg" height="500">
 				</div>
 			</section>
-			<section data-background-color="rgb(255, 255, 255)">
-				<div class="r-stack">
-					<img src="./markdown/community_logo.png">
-				</div>
-			</section>
+			<section data-markdown="./markdown/community.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
 			<section data-markdown="./markdown/04_structure.md"></section>
 			<section>
 				<p>return values and side effects</p>
 			</section>
 			<section>
 				<h6>return values</h6>
-				<p>caller</p>
+				<p>test process</p>
 				<p>
 					<span style="display: inline-block;" class="fragment fade-down">↓</span>
 					<span style="display: inline-block;" class="fragment fade-up">↑</span>
 				</p>
 				<p>code under test</p>
-				
+
 			</section>
 			<section>
 				<h6>side effects</h6>
-				<p>caller</p>
+				<p>test process</p>
 				<p>
 					<span style="display: inline-block;" class="fragment fade-down">↓</span>
 				</p>
 				<p>code under test</p>
 				<p>
 					<span style="display: inline-block;" class="fragment fade-down">↓</span>
-				</p>	
+				</p>
 				<p>somewhere else</p>
+				<aside class="notes">
+					controller tests often just focus on the return value
+
+					black box
+				</aside>
+			</section>
+			<section>
+				<h6>black(white) box</h6>
+				<p>
+					<span style="display: inline-block;" class="fragment fade-down">↓</span>
+					<span style="display: inline-block;" class="fragment fade-up">↑</span>
+				</p>
+
+				<p style="outline: 5px solid white">code under test</p>
+				<p>
+					<span style="display: inline-block;" class="fragment fade-down">↓</span>
+				</p>
+				<aside class="notes">
+					controller tests often just focus on the return value
+
+					black box
+				</aside>
 			</section>
 			<section>
 				<p>boundary</p>
@@ -68,11 +86,38 @@
 				</p>
 				<p>
 					<span style="color:red;">||||||</span>
-					<span style="color:green;">|||||||||||||||||||||||</span>
-					<span style="color:red;">||||||</span>
+					<sp, /an style="color:green;">|||||||||||||||||||||||</span>
+						<span style="color:red;">||||||</span>
 				</p>
 			</section>
-			<section data-markdown="./markdown/08_custom_messages.md"></section>
+			<section data-markdown="./markdown/08_all_the_things.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/09_assert_on_all_the_values.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/10_enumerate.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/11_what_broke.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/12_cover_your_branches.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/mox_intro.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/mox_01.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/mox_02.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/mox_03.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/mox_04.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/mox_05.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/mox_06.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/mox_07.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section>
+				<p style="color:red; text-align:left" class="r-fit-text">** (Mox.VerificationError) error while verifying mocks for #PID<0.891.0>:</0.891.0>
+					<br>
+					* expected IndentityThiefDouble.steal_identity/1 to be invoked once but it was invoked 0 times
+				</p>
+			</section>
+			<section data-markdown="./markdown/mox_09.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/mox_10.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/mox_11.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/mox_12.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/mox_13.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/mox_14.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/mox_15.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/mox_16.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
+			<section data-markdown="./markdown/mox_17.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section>
 		</div>
 	</div>
 
